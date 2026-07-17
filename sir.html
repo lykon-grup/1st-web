@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="ur-PK">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Respected Faculty - Sir Page</title>
+    <title>Sir Page - Faculty</title>
     <style>
-        /* Google Fonts for premium typography */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
         * {
             margin: 0;
@@ -15,141 +14,141 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        /* Screenshot jaisa premium dark background */
         body {
-            background: linear-gradient(135deg, #e0f2fe, #bae6fd);
-            color: #334155;
+            background-color: #141414;
+            color: #ffffff;
             padding: 40px 20px;
-            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        /* Header Styling */
+        /* Top Header Area */
         header {
             text-align: center;
-            margin-bottom: 50px;
-        }
-
-        h1 {
-            color: #dc2626;
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-
-        h1::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: #dc2626;
-            border-radius: 2px;
-        }
-
-        /* Team Container (Flexbox/Grid Layout) */
-        .faculty-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Professional Teacher Card */
-        .teacher-card {
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            width: 320px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.8);
-        }
-
-        .teacher-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Image Wrapper */
-        .image-container {
             width: 100%;
-            height: 280px;
-            background-color: #f1f5f9;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin-bottom: 30px;
         }
 
-        .image-container img {
+        /* Red ki jagah khubsurat premium Blue title */
+        h1 {
+            color: #38bdf8; /* Bright Premium Sky Blue */
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding-bottom: 20px;
+        }
+
+        /* Screenshot jasi divider line - Blue theme me */
+        .divider {
+            width: 100%;
+            height: 2px;
+            background-color: #0284c7; /* Darker professional blue line */
+            margin-bottom: 40px;
+        }
+
+        /* Main Container */
+        .faculty-list {
+            width: 100%;
+            max-width: 950px; /* Screenshot ke mutabiq wide card structure */
+            display: flex;
+            flex-direction: column;
+            gap: 30px; /* Cards ke darmiyan gap */
+        }
+
+        /* Screenshot jasa Rounded Dark Card Layout */
+        .teacher-card {
+            background-color: #1e1e1e;
+            border-radius: 20px;
+            border: 1px solid #2d2d2d;
+            padding: 30px;
+            display: flex;
+            flex-direction: row; /* Image left, Text right */
+            align-items: center;
+            gap: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        /* Card par halka sa blue glow hover effect */
+        .teacher-card:hover {
+            transform: translateY(-3px);
+            border-color: #0284c7;
+        }
+
+        /* Image Styling - Screenshot jasi rounded corners wali */
+        .image-box {
+            width: 260px;
+            height: 280px;
+            flex-shrink: 0; /* Image size ko fix rakhne ke liye */
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        .image-box img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Image ko box me perfectly fit karega crop kiye bina */
-            transition: transform 0.5s ease;
+            object-fit: cover;
         }
 
-        .teacher-card:hover .image-container img {
-            transform: scale(1.05); /* Hover karne par premium zoom effect */
+        /* Text Content Styling */
+        .info-box {
+            flex-grow: 1;
+            font-size: 1.25rem; /* Light and clean text like screenshot */
+            color: #e2e8f0;
+            line-height: 1.6;
         }
 
-        /* Content Info Layout */
-        .teacher-info {
-            padding: 25px 20px;
-        }
-
-        .teacher-name {
-            font-size: 1.35rem;
+        /* Highlighted Names - Screenshot jase styling me premium Blue colors */
+        .highlight-blue {
+            color: #38bdf8; /* Soft Electric Blue */
             font-weight: 600;
-            margin-bottom: 5px;
         }
 
-        /* Colors as per your design but in modern palette */
-        .naseer .teacher-name { color: #16a34a; } /* Elegant Green */
-        .saqib .teacher-name { color: #dc2626; }   /* Elegant Red */
-        .babar .teacher-name { color: #dc2626; }   /* Elegant Red */
-
-        .teacher-tag {
-            font-size: 0.95rem;
+        .highlight-sub {
+            color: #0ea5e9; /* Deep Sky Blue for descriptions */
             font-weight: 500;
-            color: #64748b;
-            margin-bottom: 12px;
-            display: inline-block;
         }
 
-        .teacher-desc {
-            font-size: 0.9rem;
-            line-height: 1.5;
-            color: #475569;
-        }
-
-        /* Gold highlight text for Sir Saqib */
-        .highlight-text {
-            color: #ca8a04; /* Darker, premium gold color */
-            font-weight: 600;
-            background: #fef9c3;
-            padding: 4px 10px;
-            border-radius: 20px;
-            display: inline-block;
+        /* Special Gold tag for Sir Saqib as per your original data but in modern tone */
+        .gold-text {
+            color: #fbbf24; 
+            font-style: italic;
+            display: block;
             margin-top: 10px;
-            font-size: 0.85rem;
+            font-size: 1.1rem;
         }
 
-        /* Responsive Design for Mobile */
+        /* --------------------------------------
+           MOBILE & TABLET RESPONSIVE FIX
+        -------------------------------------- */
         @media (max-width: 768px) {
-            .teacher-card {
-                width: 100%;
-                max-width: 340px;
+            body {
+                padding: 20px 15px;
             }
+
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+
+            /* Mobile par content row se column (ooper-neeche) ho jayega */
+            .teacher-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .image-box {
+                width: 100%;
+                max-width: 260px; /* Mobile par bhi perfect size rahega */
+                height: 260px;
+            }
+
+            .info-box {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -159,43 +158,45 @@
     <header>
         <h1>Welcome to the Sir Page</h1>
     </header>
+    
+    <!-- Top Horizontal Line like the image -->
+    <div class="divider"></div>
 
-    <main class="faculty-container">
+    <main class="faculty-list">
 
-        <!-- Sir Naseer Card -->
-        <div class="teacher-card naseer">
-            <div class="image-container">
+        <!-- Teacher 1: Sir Naseer -->
+        <div class="teacher-card">
+            <div class="image-box">
                 <img src="naseer.png" alt="Sir Naseer">
             </div>
-            <div class="teacher-info">
-                <h2 class="teacher-name">Sir Naseer</h2>
-                <span class="teacher-tag">(Expert Mathematician)</span>
-                <p class="teacher-desc"><em>Highly Respected Mentor Winning Hearts through Education</em></p>
+            <div class="info-box">
+                My mentor is <span class="highlight-blue">Sir Naseer</span>. He is an <span class="highlight-sub">Expert Mathematician</span>.
+                <br><br>
+                <span style="color: #a1a1aa; font-size: 1.1rem; font-style: italic;">
+                    "Highly Respected Mentor Winning Hearts through Education"
+                </span>
             </div>
         </div>
 
-        <!-- Sir Saqib Card -->
-        <div class="teacher-card saqib">
-            <div class="image-container">
+        <!-- Teacher 2: Sir Saqib -->
+        <div class="teacher-card">
+            <div class="image-box">
                 <img src="saqib.png" alt="Sir Saqib">
             </div>
-            <div class="teacher-info">
-                <h2 class="teacher-name">Sir Saqib</h2>
-                <span class="teacher-tag">(M.A. English) — Senior Lecturer</span>
-                <p class="teacher-desc">Most Experienced & Respected Teacher of our Academy</p>
-                <span class="highlight-text">★ Top Educator</span>
+            <div class="info-box">
+                Our senior lecturer is <span class="highlight-blue">Sir Saqib</span> (M.A. English). 
+                <br>
+                <span class="gold-text">Most Experienced & Respected Teacher of our Academy</span>
             </div>
         </div>
 
-        <!-- Sir Babar Khan Card -->
-        <div class="teacher-card babar">
-            <div class="image-container">
-                <img src="babar.png" alt="Sir Babar Khan">
+        <!-- Teacher 3: Sir Babar Khan -->
+        <div class="teacher-card">
+            <div class="image-box">
+                <img src="babar.png" alt="Sir Babar khan">
             </div>
-            <div class="teacher-info">
-                <h2 class="teacher-name">Sir Babar Khan</h2>
-                <span class="teacher-tag">(M.A. English) — Senior Lecturer</span>
-                <p class="teacher-desc">Dedicated to academic excellence and student success.</p>
+            <div class="info-box">
+                This is <span class="highlight-blue">Sir Babar khan</span>. He serves as a <span class="highlight-sub">Senior Lecturer</span> holding an M.A. in English.
             </div>
         </div>
 
